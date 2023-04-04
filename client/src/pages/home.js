@@ -6,6 +6,7 @@ import Products from "../Images/product1.JPG";
 import Products2 from "../Images/product2.JPG"; 
 import Merchants from "../Images/merchant1.JPG";
 import Merchants2 from "../Images/merchant2.JPG"; 
+import darkwoodbg from "../Images/darkwood.png";
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -15,9 +16,13 @@ function Home() {
   return (
     <>
 
-      <div>
+      <div style={{
+      backgroundImage: `url(${darkwoodbg})`,
+      backgroundSize: '25 rem',
+      backgroundRepeat: 'repeat',
+    }}>
             <Hero />
-      <div className="p-16 block text-xl text-center">
+      <div className="p-16 hidden md:block text-xl text-center">
         <Swiper
           // install Swiper modules // 
           modules={[Navigation, Scrollbar, A11y, Autoplay]}
@@ -86,8 +91,30 @@ function Home() {
 
         </Swiper>
       </div>
-      </div>
 
+      <div className="p-16 py-3 p-3 block text-xl text-center md:hidden">
+      <SlideMenu
+                backgroundImg={`url(${Products})`}
+                toLink={"/shop"}
+                text={"Start shopping"}
+              />
+                 <SlideMenu
+                backgroundImg={`url(${Merchants})`}
+                toLink={"/merchants"}
+                text={"Merchants"}
+              />
+                      <SlideMenu
+            backgroundImg={`url(${Products2})`}
+            toLink={"/shop"}
+            text={"Start shopping"}
+          />
+       <SlideMenu
+            backgroundImg={`url(${Merchants2})`}
+            toLink={"/merchants"}
+            text={"Merchants"}
+          />
+      </div>
+</div>
    
       
   
