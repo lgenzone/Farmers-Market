@@ -126,6 +126,9 @@ For more information about this license please visit https://opensource.org/lice
 
 ## *Screenshots*
 ___
+![mobile](https://user-images.githubusercontent.com/114446244/229687367-c5508466-0236-4b67-ad81-c33fe26ecc4d.PNG)
+
+![web](https://user-images.githubusercontent.com/114446244/229687353-c19fe109-1063-44d3-b2b6-a1c03e520e3f.PNG)
 
 
 
