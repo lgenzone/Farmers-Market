@@ -129,6 +129,8 @@ ___
 ![mobile](https://user-images.githubusercontent.com/114446244/229687367-c5508466-0236-4b67-ad81-c33fe26ecc4d.PNG)
 
 ![web](https://user-images.githubusercontent.com/114446244/229687353-c19fe109-1063-44d3-b2b6-a1c03e520e3f.PNG)
+![Shop](https://user-images.githubusercontent.com/114446244/229687667-86601ff0-eb9c-4a0c-b75e-809f2c801f18.PNG)
+![merchants](https://user-images.githubusercontent.com/114446244/229687676-cc81a114-95a6-423d-8172-b329f77eac7e.PNG)
 
 
 
