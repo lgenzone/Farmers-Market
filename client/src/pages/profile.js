@@ -26,6 +26,7 @@ function Profile() {
       ...userData,
       products: updatedProducts,
     });
+    window.location.reload();
   };
 
   const handleAddProduct = ({ addProduct }) => {
@@ -33,6 +34,7 @@ function Profile() {
       ...userData,
       products: [...userData.products, addProduct],
     });
+    window.location.reload();
   };
 
   return (
@@ -88,7 +90,7 @@ function Profile() {
                 <div className="flex flex-col justify-center py-4 rounded-2xl">
                   <NewProduct onAddProduct={handleAddProduct} />
                   {userData.products.length
-                    ? (<div className="flex flex-row flex-wrap">
+                    ? (<div className="flex flex-row flex-wrap justify-center">
                       {userData.products.map((product) => (
                         <Product key={product._id} product={product} onDeleteProduct={handleDeleteProduct} />
                       ))}

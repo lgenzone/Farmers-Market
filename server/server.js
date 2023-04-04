@@ -10,7 +10,7 @@ const uploadFile = require('./utils/gc-upload');
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-const {authMiddleware} = require('./utils/jwt-auth');
+const { authMiddleware } = require('./utils/jwt-auth');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -30,8 +30,13 @@ app.use(express.json());
 
 //We will need to add NODE_ENV="production" in .env file when deploying.
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
-  }
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
+
 
 //Upload images using this route before calling query to create product, use fetch()
 app.post('/upload', upload.single('image'), async (req, res) => {
@@ -45,7 +50,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
-  server.applyMiddleware({app});
+  server.applyMiddleware({ app });
 };
 
 db.once('open', () => {
